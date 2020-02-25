@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<spring-kafka.version>2.4.2.RELEASE</spring-kafka.version>
 	</properties>
 
 	<dependencies>
@@ -26,6 +27,7 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+			<version>${spring-kafka.version}</version>
 		</dependency>
 
 		<dependency>
@@ -43,6 +45,7 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka-test</artifactId>
+			<version>${spring-kafka.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
