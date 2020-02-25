@@ -32,7 +32,7 @@ public class ConsumerOfExampleDTOConfig {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         
-        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer(ExampleDTO.class));
+        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(ExampleDTO.class, false));
     }
 
 }
