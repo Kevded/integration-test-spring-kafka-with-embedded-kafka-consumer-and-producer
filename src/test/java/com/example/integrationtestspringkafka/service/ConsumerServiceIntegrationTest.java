@@ -75,7 +75,6 @@ public class ConsumerServiceIntegrationTest {
         // THEN
         // we must have 1 entity inserted
         // We cannot predict when the insertion into the database will occur. So we wait until the value is present. Thank to Awaitility.
-        //  List<ExampleEntity> exampleEntityList = exampleRepository.findAll();
         await().atMost(Durations.TEN_SECONDS).untilAsserted(() -> {
             var exampleEntityList = exampleRepository.findAll();
             assertEquals(1, exampleEntityList.size());
