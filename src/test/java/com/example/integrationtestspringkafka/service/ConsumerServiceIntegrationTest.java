@@ -55,7 +55,7 @@ public class ConsumerServiceIntegrationTest {
      * We verify the output in the topic. But aslo in the database.
      */
     @Test
-    public void itShould_ConsumeCorrectExampleDTO_to_TOPIC_EXAMPLE_and_should_saveCorrectExampleEntity() throws ExecutionException, InterruptedException {
+    public void itShould_ConsumeCorrectExampleDTO_from_TOPIC_EXAMPLE_and_should_saveCorrectExampleEntity() throws ExecutionException, InterruptedException {
         // GIVEN
         ExampleDTO exampleDTO = mockExampleDTO("Un nom 2", "Une description 2");
         // simulation consumer
