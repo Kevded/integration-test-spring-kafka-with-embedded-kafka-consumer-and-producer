@@ -21,14 +21,13 @@ public class ConsumerService {
      * Consume ExampleDTO on topic : TOPIC_EXAMPLE
      * Then save it in database.
      *
-     * @param exampleDTO
+     * @param exampleDTO {@link ExampleDTO}
      */
     @KafkaListener(topics = "TOPIC_EXAMPLE", groupId = "consumer_example_dto")
-    public void consumeExampleDTO(ExampleDTO exampleDTO) throws Exception {
+    public void consumeExampleDTO(ExampleDTO exampleDTO)  {
         log.info("Received from topic=TOPIC_EXAMPLE ExampleDTO={}", exampleDTO);
         exampleRepository.save(convertToExampleEntity(exampleDTO));
-        throw new Exception("cannot be done");
-       // log.info("saved in database {}", exampleDTO);
+        log.info("saved in database {}", exampleDTO);
     }
 
     /**
