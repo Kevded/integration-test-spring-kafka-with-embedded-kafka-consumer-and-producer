@@ -1,5 +1,6 @@
-package com.example.integrationtestspringkafka;
+package com.example.integrationtestspringkafka.service;
 
+import com.example.integrationtestspringkafka.dto.ExampleDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;

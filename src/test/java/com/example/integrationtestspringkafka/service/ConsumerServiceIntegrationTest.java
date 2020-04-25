@@ -1,4 +1,4 @@
-package com.example.integrationtestspringkafka;
+package com.example.integrationtestspringkafka.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,6 +15,7 @@ public class ConsumerServiceIntegrationTest {
 
     @Test
     public void itShouldConsumeExampleDTO()  {
+        // TODO
         // GIVEN
         // WHEN
         // THEN

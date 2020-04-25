@@ -1,5 +1,6 @@
-package com.example.integrationtestspringkafka;
+package com.example.integrationtestspringkafka.service;
 
+import com.example.integrationtestspringkafka.dto.ExampleDTO;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -25,6 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @EmbeddedKafka(topics = {"TOPIC_EXAMPLE"})
 public class ProducerServiceIntegrationTest {
     private static final String TOPIC_EXAMPLE = "TOPIC_EXAMPLE";
+
     @Autowired
     private EmbeddedKafkaBroker embeddedKafkaBroker;
 
@@ -39,7 +41,7 @@ public class ProducerServiceIntegrationTest {
     }
 
     @Test
-    public void itShouldProduceCorrectExampleDTO() {
+    public void itShould_ProduceCorrectExampleDTO_to_TOPIC_EXAMPLE() {
         // GIVEN
         ExampleDTO exampleDTO = mockExampleDTO("Un nom", "Une description");
         // simulation consumer
@@ -57,6 +59,5 @@ public class ProducerServiceIntegrationTest {
 
         assertEquals("Une description", valueReceived.getDescription());
         assertEquals("Un nom", valueReceived.getName());
-
     }
 }
