@@ -17,6 +17,12 @@ public class ConsumerService {
         this.exampleRepository = exampleRepository;
     }
 
+    /**
+     * Consume ExampleDTO on topic : TOPIC_EXAMPLE
+     * Then save it in database.
+     *
+     * @param exampleDTO
+     */
     @KafkaListener(topics = "TOPIC_EXAMPLE")
     public void consumeExampleDTO(ExampleDTO exampleDTO) {
         log.info("Received from topic=TOPIC_EXAMPLE ExampleDTO={}", exampleDTO);

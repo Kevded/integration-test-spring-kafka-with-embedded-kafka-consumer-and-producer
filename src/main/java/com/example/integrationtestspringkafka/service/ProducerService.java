@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ProducerService {
     Logger log = LoggerFactory.getLogger(ProducerService.class);
 
-    private String topic = "TOPIC_EXAMPLE";
+    private String topic = "TOPIC_EXAMPLE_EXTERNE";
 
     private KafkaTemplate<String, ExampleDTO> kafkaTemplate;
 
@@ -18,6 +18,11 @@ public class ProducerService {
         this.kafkaTemplate = kafkaTemplate;
     }
 
+    /**
+     * Send ExampleDTO to an external topic : TOPIC_EXAMPLE_EXTERNE.
+     *
+     * @param exampleDTO
+     */
     public void send(ExampleDTO exampleDTO) {
         log.info("send to topic={} ExampleDTO={}", topic, exampleDTO);
         kafkaTemplate.send(topic, exampleDTO);
