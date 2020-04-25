@@ -23,12 +23,12 @@ public class ConsumerService {
      *
      * @param exampleDTO
      */
-    @KafkaListener(topics = "TOPIC_EXAMPLE")
-    public void consumeExampleDTO(ExampleDTO exampleDTO) {
+    @KafkaListener(topics = "TOPIC_EXAMPLE", groupId = "consumer_example_dto")
+    public void consumeExampleDTO(ExampleDTO exampleDTO) throws Exception {
         log.info("Received from topic=TOPIC_EXAMPLE ExampleDTO={}", exampleDTO);
-
         exampleRepository.save(convertToExampleEntity(exampleDTO));
-        log.info("saved in database {}", exampleDTO);
+        throw new Exception("cannot be done");
+       // log.info("saved in database {}", exampleDTO);
     }
 
     /**
