@@ -2,6 +2,8 @@
 
 # Integration Test Spring Kafka with Embedded Kafka Consumer and Producer
 
-Sample project to show how to implement Integration Test with Spring Kafka and EmbeddedKafka.
+Sample project to show how to implement Integration Test in Spring Boot. With Spring Kafka and EmbeddedKafka.
 
-Example with Spring Kafka 2.4.2
+Example with Spring Boot 2.2.6 (Spring Kafka 2.4.5)
+
+Official Example : [github.com/spring-projects/spring-kafka](https://github.com/spring-projects/spring-kafka)
