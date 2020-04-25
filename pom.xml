@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>integrationtestspringkafka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>integration-test-spring-kafka-with-embedded-kafka-consumer-and-producer</name>
+	<name>integration-test-spring-kafka-with-embedded-kafka-consumerService-and-producer</name>
 	<description>Integration Test with spring kafka  Embedded Kafka Consumer  Producer</description>
 
 	<properties>
