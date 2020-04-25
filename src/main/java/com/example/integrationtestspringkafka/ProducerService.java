@@ -1,20 +1,24 @@
 package com.example.integrationtestspringkafka;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ProducerService {
-	private String topic = "TOPIC_EXAMPLE";
-	
-	private KafkaTemplate<String, ExampleDTO> kafkaTemplate;
-	
-	ProducerService(KafkaTemplate kafkaTemplate){
-		this.kafkaTemplate = kafkaTemplate;	
-	}
-	
-	public void send(ExampleDTO exampleDTO) {
-		System.out.println("send to topic=TOPIC_EXAMPLE ExampleDTO=" + exampleDTO);
-		kafkaTemplate.send(topic, exampleDTO);
-	}
+    Logger log = LoggerFactory.getLogger(ProducerService.class);
+
+    private String topic = "TOPIC_EXAMPLE";
+
+    private KafkaTemplate<String, ExampleDTO> kafkaTemplate;
+
+    ProducerService(KafkaTemplate kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+    }
+
+    public void send(ExampleDTO exampleDTO) {
+        log.info("send to topic={} ExampleDTO={}", topic, exampleDTO);
+        kafkaTemplate.send(topic, exampleDTO);
+    }
 }
