@@ -1,3 +1,5 @@
+![Java CI](https://github.com/Kevded/integration-test-spring-kafka-with-embedded-kafka-consumer-and-producer/workflows/Java%20CI/badge.svg)
+
 # Integration Test Spring Kafka with Embedded Kafka Consumer and Producer
 
 Sample project to show how to implement Integration Test with Spring Kafka and EmbeddedKafka.
