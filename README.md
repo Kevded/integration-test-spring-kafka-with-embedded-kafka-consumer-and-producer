@@ -17,3 +17,7 @@ To write integration tests you can also have a look at :
 
 - [github.com/authorjapps/zerocode](https://github.com/authorjapps/zerocode)
 - [github.com/authorjapps/zerocode/tree/master/kafka-testing](https://github.com/authorjapps/zerocode/tree/master/kafka-testing)
+
+# Articles
+
+- [gitbook.deddy.me/test-dintegration-avec-spring-kafka](https://gitbook.deddy.me/test-dintegration-avec-spring-kafka)
