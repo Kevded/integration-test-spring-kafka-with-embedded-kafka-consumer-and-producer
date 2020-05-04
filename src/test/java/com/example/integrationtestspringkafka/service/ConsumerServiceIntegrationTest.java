@@ -38,9 +38,7 @@ public class ConsumerServiceIntegrationTest {
 
     @Autowired
     private EmbeddedKafkaBroker embeddedKafkaBroker;
-    @Autowired
 
-    private ConsumerService consumerService;
     @Autowired
     private ExampleRepository exampleRepository;
 

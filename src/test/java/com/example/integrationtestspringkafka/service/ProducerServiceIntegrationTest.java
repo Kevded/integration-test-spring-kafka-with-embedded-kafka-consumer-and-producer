@@ -1,7 +1,6 @@
 package com.example.integrationtestspringkafka.service;
 
 import com.example.integrationtestspringkafka.dto.ExampleDTO;
-import com.example.integrationtestspringkafka.repository.ExampleRepository;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -35,9 +34,6 @@ public class ProducerServiceIntegrationTest {
 
     @Autowired
     private ProducerService producerService;
-
-    @Autowired
-    private ExampleRepository exampleRepository;
 
     public ExampleDTO mockExampleDTO(String name, String description) {
         ExampleDTO exampleDTO = new ExampleDTO();
