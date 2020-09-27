@@ -67,5 +67,4 @@ public class ProducerServiceIntegrationTest {
 
         consumerServiceTest.close();
     }
-
 }
